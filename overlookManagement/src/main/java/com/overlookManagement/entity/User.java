@@ -1,4 +1,4 @@
-package com.phegondev.PhegonHotel.entity;
+package com.overlookManagement;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
