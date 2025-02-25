@@ -1,4 +1,4 @@
-package com.overlookManagement;
+package com.overlookManagement.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
