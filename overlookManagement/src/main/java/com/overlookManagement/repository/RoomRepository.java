@@ -30,6 +30,8 @@ public interface RoomRepository extends JpaRepository<Room, Long> {
     " WHERE (bk.checkInDate <= :checkOutDate) " +
     " AND (bk.checkOutDate >= :checkInDate)) ")
 
+    // ATTENZIONE: users can book a room only one time
+
     //chekc the 3 field in the checkox to select
     List<Room> findAvailableRoomsByDatesAndTypes(LocalDate checkInDate, LocalDate checkOutDate, String room);
 
