@@ -128,6 +128,9 @@ public class UserService implements IUserService {
         try {
             User user = userRepository.findById(Long.valueOf(userId)).orElseThrow(() -> new OurException("User not found"));
             UserDTO userDTO = Utils.mapUserEntityToUserDTOPlusUserBookingsAndRoom(user);
+            response.setStatusCode(200);
+            response.setMessage("succesfull");
+            response.setUser(userDTO);
         
         }catch(OurException e){
             response.setStatusCode(400);
